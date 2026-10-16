@@ -232,14 +232,14 @@ footer .ic{vertical-align:0}
     
   </div>
   <nav class="hbar" aria-label="Seções do site"><div class="wrap hb">
-    <a href="#cardapio"><b>01</b><span>Cardápio</span><i aria-hidden="true">→</i></a>
+    <a href="#Catálogo"><b>01</b><span>Cardápio</span><i aria-hidden="true">→</i></a>
     <a href="#historia" data-story><b>02</b><span>Nossa história</span><i aria-hidden="true">→</i></a>
     <a href="#onde"><b>03</b><span>Onde comprar</span><i aria-hidden="true">→</i></a>
   </div></nav>
 </header>
 
 <main>
-<section id="cardapio">
+<section id="Catálogo">
   <div class="wrap">
     <h2>Cardápio</h2>
     <p class="sub">Escolha o produto e o tamanho. O pedido abre no WhatsApp já preenchido.</p>
@@ -436,7 +436,7 @@ story.addEventListener("touchend",function(e){if(sx===null)return;var dx=e.chang
 var h=document.querySelector(".hero h1");
 if(h){h.setAttribute("aria-label",h.textContent.trim());h.innerHTML=h.textContent.trim().split(/\s+/).map(function(t,i){return '<span class="w" aria-hidden="true"><span style="--i:'+i+'">'+t+'</span></span>'}).join(" ")}
 if(!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-[["#cardapio .eyebrow,#cardapio h2,#cardapio .sub",90],["#cardapio .card",170],[".origin .wrap>div",170],["#onde h2,#onde .sub,#onde .loc",110],["#opiniao .eyebrow,#opiniao h2,#opiniao .sub,#opiniao .fb,#opiniao .fbnote",110],["#detalhe .eyebrow,#detalhe h2,#detalhe .dt-grid,#detalhe .dt-cols>div,#detalhe .dt-close",110]].forEach(function(g){
+[["#Catálogo .eyebrow,#Catálogo h2,#Catálogo .sub",90],["#Catálogo .card",170],[".origin .wrap>div",170],["#onde h2,#onde .sub,#onde .loc",110],["#opiniao .eyebrow,#opiniao h2,#opiniao .sub,#opiniao .fb,#opiniao .fbnote",110],["#detalhe .eyebrow,#detalhe h2,#detalhe .dt-grid,#detalhe .dt-cols>div,#detalhe .dt-close",110]].forEach(function(g){
   document.querySelectorAll(g[0]).forEach(function(el,i){el.classList.add("rv");el.style.setProperty("--d",(i*g[1])+"ms")})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add("in");io.unobserve(el);setTimeout(function(){el.classList.remove("rv","in")},2800)})},{threshold:.15,rootMargin:"0px 0px -6% 0px"});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
